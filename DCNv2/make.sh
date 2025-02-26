@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
-sudo rm *.so
-sudo rm -r build/
+del *.so
+rmdir /s /q build
 python setup.py build develop

@@ -7,6 +7,7 @@ import math
 import logging
 import numpy as np
 from os.path import join
+import os as os
 
 import torch
 from torch import nn
@@ -288,18 +289,27 @@ class DLA(nn.Module):
         return y
 
     def load_pretrained_model(self, data='imagenet', name='dla34', hash='ba72cf86'):
-        # fc = self.fc
-        if name.endswith('.pth'):
-            model_weights = torch.load(data + name)
-        else:
-            model_url = get_model_url(data, name, hash)
-            model_weights = model_zoo.load_url(model_url)
-        num_classes = len(model_weights[list(model_weights.keys())[-1]])
-        self.fc = nn.Conv2d(
-            self.channels[-1], num_classes,
-            kernel_size=1, stride=1, padding=0, bias=True)
-        self.load_state_dict(model_weights)
-        # self.fc = fc
+        local_model_path = "C:/dev/ElDet/backbone/dla34-ba72cf86.pth"  # Update this to the correct path
+
+        if not os.path.exists(local_model_path):
+            raise FileNotFoundError(f"Model file not found: {local_model_path}\n"
+                                    "Please download the DLA34 model manually.")
+
+        print(f"Loading pretrained weights from: {local_model_path}")
+        model_weights = torch.load(local_model_path, map_location="cuda" if torch.cuda.is_available() else "cpu")
+        self.load_state_dict(model_weights, strict=False)  # Use strict=False in case some keys mismatch
+        # # fc = self.fc
+        # if name.endswith('.pth'):
+        #     model_weights = torch.load(data + name)
+        # else:
+        #     model_url = get_model_url(data, name, hash)
+        #     model_weights = model_zoo.load_url(model_url)
+        # num_classes = len(model_weights[list(model_weights.keys())[-1]])
+        # self.fc = nn.Conv2d(
+        #     self.channels[-1], num_classes,
+        #     kernel_size=1, stride=1, padding=0, bias=True)
+        # self.load_state_dict(model_weights)
+        # # self.fc = fc
 
 
 def dla34(pretrained=True, **kwargs):  # DLA-34

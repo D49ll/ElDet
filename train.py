@@ -58,12 +58,14 @@ def train(opt):
                    'iou_weight': opt.w_iou, 'mask_weight': opt.w_mask}
     criterion = CtdetLoss(loss_weight)
 
-    gpu_available = torch.cuda.is_available()
-    if opt.use_gpu and gpu_available:
-        device = torch.device("cuda")
-        model.cuda()
-    else:
-        device = torch.device("cpu")
+    # gpu_available = torch.cuda.is_available()
+    # if opt.use_gpu and gpu_available:
+    #     device = torch.device("cuda")
+    #     model.cuda()
+    # else:
+    #     device = torch.device("cpu")
+    device = torch.device("cpu")
+
     print(device)
 
     optimizer = torch.optim.Adam(model.parameters(), lr=opt.lr, eps=opt.eps, amsgrad=True)
@@ -75,6 +77,8 @@ def train(opt):
     print('the val dataset has %d images' % (len(val_dataset)))
 
     best_test_loss = np.inf
+    print("starting training loop")
+
     for epoch in range(opt.epoch):
         model.train()
 

@@ -1,0 +1,15 @@
+# ninja log v6
+12	1365	7622765835737100	C:/dev/ElDet/DCNv2/build/temp.win-amd64-3.7/Release/dev/ElDet/DCNv2/src/cpu/dcn_v2_psroi_pooling_cpu.obj	23cd5e0725ad4990
+5	1368	7622765835663460	C:/dev/ElDet/DCNv2/build/temp.win-amd64-3.7/Release/dev/ElDet/DCNv2/src/cpu/dcn_v2_cpu.obj	d7da126a7c63fd1c
+9	1370	7622765835709711	C:/dev/ElDet/DCNv2/build/temp.win-amd64-3.7/Release/dev/ElDet/DCNv2/src/cpu/dcn_v2_im2col_cpu.obj	f72ed4a0e1cbe04b
+1	4683	7622765835631422	C:/dev/ElDet/DCNv2/build/temp.win-amd64-3.7/Release/dev/ElDet/DCNv2/src/vision.obj	9f7aae5b8c79ee8c
+20	6452	7622765835817580	C:/dev/ElDet/DCNv2/build/temp.win-amd64-3.7/Release/dev/ElDet/DCNv2/src/cuda/dcn_v2_im2col_cuda.obj	5935ac4c62392493
+15	6453	7622765835773186	C:/dev/ElDet/DCNv2/build/temp.win-amd64-3.7/Release/dev/ElDet/DCNv2/src/cuda/dcn_v2_cuda.obj	8785cf185834a609
+24	6495	7622765835852178	C:/dev/ElDet/DCNv2/build/temp.win-amd64-3.7/Release/dev/ElDet/DCNv2/src/cuda/dcn_v2_psroi_pooling_cuda.obj	cde81eaeac5c4344
+9	1272	7622765932659732	C:/dev/ElDet/DCNv2/build/temp.win-amd64-3.7/Release/dev/ElDet/DCNv2/src/cpu/dcn_v2_im2col_cpu.obj	45e8ab866a20f021
+11	1276	7622765932687499	C:/dev/ElDet/DCNv2/build/temp.win-amd64-3.7/Release/dev/ElDet/DCNv2/src/cpu/dcn_v2_psroi_pooling_cpu.obj	fb52fd4737957b67
+6	1280	7622765932630450	C:/dev/ElDet/DCNv2/build/temp.win-amd64-3.7/Release/dev/ElDet/DCNv2/src/cpu/dcn_v2_cpu.obj	a1f50d460b0bb5f0
+3	4685	7622765932601207	C:/dev/ElDet/DCNv2/build/temp.win-amd64-3.7/Release/dev/ElDet/DCNv2/src/vision.obj	4189143b96ecc0d4
+14	5957	7622765932712110	C:/dev/ElDet/DCNv2/build/temp.win-amd64-3.7/Release/dev/ElDet/DCNv2/src/cuda/dcn_v2_cuda.obj	fc23d67f60187fe2
+17	6051	7622765932745941	C:/dev/ElDet/DCNv2/build/temp.win-amd64-3.7/Release/dev/ElDet/DCNv2/src/cuda/dcn_v2_im2col_cuda.obj	6ba849af11ab3baa
+21	6116	7622765932789065	C:/dev/ElDet/DCNv2/build/temp.win-amd64-3.7/Release/dev/ElDet/DCNv2/src/cuda/dcn_v2_psroi_pooling_cuda.obj	23187c438be2b8a5
